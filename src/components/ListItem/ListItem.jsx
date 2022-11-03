@@ -8,7 +8,7 @@ function ListItem({ item }) {
 
     const { name, sprites } = item;
     const sprite = sprites.other['official-artwork'].front_default;
-    const isFavorite = appContext.favorites.includes(item.id);
+    const isFavorite = appContext.favorites?.includes(item.id) || false;
 
     const handleClick = () => {
         if (isFavorite) {
